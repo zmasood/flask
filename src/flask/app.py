@@ -205,10 +205,10 @@ class Flask(App):
 
     default_config = ImmutableDict(
         {
-            "DEBUG": None,
+            "DEBUG": FALSE,
             "TESTING": False,
             "PROPAGATE_EXCEPTIONS": None,
-            "SECRET_KEY": None,
+            "SECRET_KEY": SECRET_KEY = os.getenv("SECRET_KEY"),
             "SECRET_KEY_FALLBACKS": None,
             "PERMANENT_SESSION_LIFETIME": timedelta(days=31),
             "USE_X_SENDFILE": False,
